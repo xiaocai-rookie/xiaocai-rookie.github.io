@@ -48,20 +48,22 @@
   };
 </script>
 
-  <meta name="description" content="CSS 层叠上下文 问题产生的原因  ​ 在一次开发中甲方要求，需要做一个自动旋转的菜单，并且鼠标放在菜单中旋转停止在当前位置。 ​ 接需求是内心是开心的，因为刚学习了 transform 的 rotate属性 ，刚好就能用上，心里是相当的开心的。 ​ 做好第一版是这样的 示例(左边的样子) ,然后 我是崩溃的，为什么调整了z-index 这货不按套路出牌呢，完全没用 ​ 这个时候就需要百度+Go">
+  <meta name="description" content="这篇文章写给开始进行微信开发的前端人员学习(初次和前端人员配合的后端也可以看),如果是大神就不用浪费时间看了!">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CSS层叠上下文">
-<meta property="og:url" content="http://yoursite.com/2020/02/09/CSS%E5%B1%82%E5%8F%A0%E4%B8%8A%E4%B8%8B%E6%96%87/index.html">
+<meta property="og:title" content="微信公众平台开发注意事项整理">
+<meta property="og:url" content="http://yoursite.com/2020/02/09/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%B9%B3%E5%8F%B0%E5%BC%80%E5%8F%91%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9%E6%95%B4%E7%90%86/index.html">
 <meta property="og:site_name" content="欢乐小屋">
-<meta property="og:description" content="CSS 层叠上下文 问题产生的原因  ​ 在一次开发中甲方要求，需要做一个自动旋转的菜单，并且鼠标放在菜单中旋转停止在当前位置。 ​ 接需求是内心是开心的，因为刚学习了 transform 的 rotate属性 ，刚好就能用上，心里是相当的开心的。 ​ 做好第一版是这样的 示例(左边的样子) ,然后 我是崩溃的，为什么调整了z-index 这货不按套路出牌呢，完全没用 ​ 这个时候就需要百度+Go">
+<meta property="og:description" content="这篇文章写给开始进行微信开发的前端人员学习(初次和前端人员配合的后端也可以看),如果是大神就不用浪费时间看了!">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-02-09T07:49:46.000Z">
-<meta property="article:modified_time" content="2020-02-10T01:00:25.924Z">
+<meta property="og:image" content="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==">
+<meta property="article:published_time" content="2020-02-09T11:53:34.000Z">
+<meta property="article:modified_time" content="2020-02-10T00:33:41.217Z">
 <meta property="article:author" content="肖采">
-<meta property="article:tag" content="CSS">
+<meta property="article:tag" content="微信开发">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==">
 
-<link rel="canonical" href="http://yoursite.com/2020/02/09/CSS%E5%B1%82%E5%8F%A0%E4%B8%8A%E4%B8%8B%E6%96%87/">
+<link rel="canonical" href="http://yoursite.com/2020/02/09/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%B9%B3%E5%8F%B0%E5%BC%80%E5%8F%91%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9%E6%95%B4%E7%90%86/">
 
 
 <script id="page-configurations">
@@ -73,7 +75,7 @@
   };
 </script>
 
-  <title>CSS层叠上下文 | 欢乐小屋</title>
+  <title>微信公众平台开发注意事项整理 | 欢乐小屋</title>
   
 
 
@@ -183,7 +185,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/09/CSS%E5%B1%82%E5%8F%A0%E4%B8%8A%E4%B8%8B%E6%96%87/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/09/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%B9%B3%E5%8F%B0%E5%BC%80%E5%8F%91%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9%E6%95%B4%E7%90%86/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.png">
@@ -196,7 +198,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          CSS层叠上下文
+          微信公众平台开发注意事项整理
         </h1>
 
         <div class="post-meta">
@@ -206,14 +208,14 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2020-02-09 15:49:46" itemprop="dateCreated datePublished" datetime="2020-02-09T15:49:46+08:00">2020-02-09</time>
+              <time title="创建时间：2020-02-09 19:53:34" itemprop="dateCreated datePublished" datetime="2020-02-09T19:53:34+08:00">2020-02-09</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-02-10 09:00:25" itemprop="dateModified" datetime="2020-02-10T09:00:25+08:00">2020-02-10</time>
+                <time title="修改时间：2020-02-10 08:33:41" itemprop="dateModified" datetime="2020-02-10T08:33:41+08:00">2020-02-10</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -221,8 +223,8 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/CSS/" itemprop="url" rel="index">
-                    <span itemprop="name">CSS</span>
+                  <a href="/categories/%E5%BE%AE%E4%BF%A1%E5%BC%80%E5%8F%91/" itemprop="url" rel="index">
+                    <span itemprop="name">微信开发</span>
                   </a>
                 </span>
             </span>
@@ -238,55 +240,39 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2 id="CSS-层叠上下文"><a href="#CSS-层叠上下文" class="headerlink" title="CSS 层叠上下文"></a>CSS 层叠上下文</h2><blockquote>
-<p>问题产生的原因</p>
-</blockquote>
-<p>​ 在一次开发中甲方要求，需要做一个自动旋转的菜单，并且鼠标放在菜单中旋转停止在当前位置。</p>
-<p>​ 接需求是内心是开心的，因为刚学习了 <code>transform</code> 的 <code>rotate</code>属性 ，刚好就能用上，心里是相当的开心的。</p>
-<p>​ 做好第一版是这样的 <a href="http://39.98.176.247:8801/examples/cssStackingContext/" target="_blank" rel="noopener">示例</a>(左边的样子) ,然后 我是崩溃的，为什么调整了<code>z-index</code> 这货不按套路出牌呢，完全没用</p>
-<p>​ 这个时候就需要百度+Google 了，好的，万能的百度网优告诉我，这是由于层叠层级混乱，出现了多个层叠空间引起的</p>
-<p>​ 啊？这是什么问题，从来没见过。好的，请看下文</p>
+        <p>这篇文章写给开始进行微信开发的前端人员学习(初次和前端人员配合的后端也可以看),如果是大神就不用浪费时间看了!</p>
 <a id="more"></a>
 
-<h4 id="问题："><a href="#问题：" class="headerlink" title="问题："></a>问题：</h4><p>​ <strong>什么是层叠空间？</strong></p>
-<p>​ <strong>层叠空间对页面有什么影响?</strong></p>
-<p>​ <strong>什么情况会造成多个层叠空间?</strong></p>
-<blockquote>
-<p>造成原因</p>
-</blockquote>
-<p>​ 层叠空间，官方说法是<a href="https://developer.mozilla.org/zh-CN/docs/Web/Guide/CSS/Understanding_z_index/The_stacking_context" target="_blank" rel="noopener">层叠上下文</a>，我们知道在页面布局时会用到定位属性，如<code>relative、absolute、inherit、fixed、static</code></p>
-<ul>
-<li>``static` 默认属性，产生定位效果</li>
-<li><code>relative</code> 相对于上一个具有定位能力的父元素进行定位且不会脱离正常文档流，若没有父元素满足这个条件则取 html 为基准元素</li>
-<li><code>absolute</code> 相对于上一个具有定位能力的父元素进行定位且会脱离正常文档流，若没有父元素满足这个条件则取 html 为基准元素</li>
-<li><code>fixed</code> 永远相对于窗口位置定位</li>
-<li><code>inherit</code> 规定应该从父元素继承 position 属性的值</li>
-</ul>
-<p>在正常文档流中，<code>relative、absolute</code>整个页面文档会是一个大的 定位空间，大定位空间包裹小定位空间，当小定位空间失效时会往父元素查询，寻找可以进行相对定位的父元素，然后相对于找到的父元素进行定位；如果一直没有找到可以定位的父元素，则以 html 作为相对定位的父元素</p>
-<p>然而当元素中出现以下 css 属性时，则会产生独立的层叠空间，不会与其他层叠空间产生互动的层叠效果且<code>z-index</code>属性调整不同的层叠空间的层叠顺序时无效(<code>z-index</code> 属性只能调整属于同一层叠空间的层叠属性)，仅会遵守正常文档流中后来居上的层叠顺序进行展示</p>
-<ul>
-<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/transform" target="_blank" rel="noopener"><code>transform</code></a></li>
-<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/filter" target="_blank" rel="noopener"><code>filter</code></a></li>
-<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/perspective" target="_blank" rel="noopener"><code>perspective</code></a></li>
-<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/clip-path" target="_blank" rel="noopener"><code>clip-path</code></a></li>
-<li><a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/mask" target="_blank" rel="noopener"><code>mask</code></a> / <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/mask-image" target="_blank" rel="noopener"><code>mask-image</code></a> / <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/mask-border" target="_blank" rel="noopener"><code>mask-border</code></a></li>
-</ul>
-<p>以上解释了我的为什么会出现的问题，即<code>transfrom:rotate</code> 时 ，每一个元素下都产生了一个独立的层叠空间，且层叠空间与层叠空间之间仅遵守 文档初始化时的 顺序，无法通过<code>z-index</code>属性改变展示顺序</p>
-<blockquote>
-<p>解决</p>
-</blockquote>
-<p>最开始时 我尝试的方法是，层叠空间内的内容进行互换，保证内容为当前的内容就好，但是一想好复杂啊，有没有简单的方法呢</p>
-<p>后来想到一个办法，新建一个 div 放在菜单列表的最外面且是渲染的最后，这样就负荷 多个层叠空间后来居上的展示逻辑</p>
-<p>成功结局，结果</p>
-<p><a href="http://39.98.176.247:8801/examples/cssStackingContext/" target="_blank" rel="noopener">右边为解决后的结果</a></p>
-<blockquote>
-<p>小结</p>
-</blockquote>
-<p>在此之前，对 CSS 的认识不够透彻，导致原理理解不清晰，导致干工作进度慢；掌握一个原理之后，结局问题的速度飞起；</p>
-<p>所以，CSS 也不能小看，已经买了张鑫旭老师的 <a href="">css 世界</a> 学习中</p>
-<p><strong>以下为我解决问题是找找的部分资料</strong></p>
-<p><a href="https://www.zhangxinxu.com/wordpress/2016/01/understand-css-stacking-context-order-z-index/" target="_blank" rel="noopener">深入理解 CSS 中的层叠上下文和层叠顺序-张鑫旭</a></p>
-<p>[层叠上下文-MDN](</p>
+<p>微信公众开发中我们会使用 config 接口进行权限验证配置，需要的字段参数如下所示:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">wx.config(&#123;</span><br><span class="line">    debug: true, &#x2F;&#x2F; 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。</span><br><span class="line">    appId: &#39;&#39;, &#x2F;&#x2F; 必填，公众号的唯一标识</span><br><span class="line">    timestamp: , &#x2F;&#x2F; 必填，生成签名的时间戳</span><br><span class="line">    nonceStr: &#39;&#39;, &#x2F;&#x2F; 必填，生成签名的随机串</span><br><span class="line">    signature: &#39;&#39;,&#x2F;&#x2F; 必填，签名</span><br><span class="line">    jsApiList: [] &#x2F;&#x2F; 必填，需要使用的JS接口列表</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p><img src="data:image/gif;base64,R0lGODlhAQABAPABAP///wAAACH5BAEKAAAALAAAAAABAAEAAAICRAEAOw==" alt="点击并拖拽以移动"></p>
+<p>（不用惊讶，上面的代码是复制的）</p>
+<p>其中 appId 是自己注册的测试号的 appId</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">timestamp 是自己获取signature随意生成的随机字符串 nonceStr 是自己获取signature</span><br><span class="line">随意生成的随机时间戳 下面讲解获取signature 的步骤</span><br></pre></td></tr></table></figure>
+
+<p>在注册微信平台测试账号后 你会获得 appID 和 appsecret</p>
+<p>通过微信接口</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://api.weixin.qq.com/cgi-bin/token?appid=你的appid&amp;grant_type=client_credential&amp;secret=你自己的appsecret</span><br></pre></td></tr></table></figure>
+
+<p>这个接口与会返回一个仅你自己填写的安全域名可用的 AccessToken</p>
+<p>接下来使用获取的 AccessToken 获取 JsApiTicket</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://api.weixin.qq.com/cgi-bin/ticket/getticket?type=jsapi&amp;access_token=你前面获取的AccessToken</span><br></pre></td></tr></table></figure>
+
+<p>这里会得到你自己域名可用的 JsApiTicket</p>
+<p>再按照下面的拼接方式将参数拼接起来进行 SHA-1 加密</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">string1 = "jsapi_ticket=" + jsapi_ticket + "&amp;noncestr=" +</span><br><span class="line">(随机的字符串)nonce_str + "&amp;timestamp=" + (时间戳)timestamp + "&amp;url=" + url;</span><br></pre></td></tr></table></figure>
+
+<p>经过上面的接口以及加密算法过后就会得到 一串 字符串 这就是 config 需要的 signature 签名了</p>
+<p>此处说一下这中间的一些坑</p>
+<p>1.在获取使用 SHA-1 算法的时候 使用的 url 是 你当前进行 config 配置的 页面的 url 并且要和你在测试号管理平台填写的域名要一致(原因是，你在进行 config 配置的时候，微信后台也根据你配置的参数进行 SHA-1 算法加密，但是在这个过程中会取的是你当前的 url)，所以这也是为什么做微信公众号开发需要前端自己起一个 web 服务并且要使用花生壳或者其他工具做动态域名的原因</p>
+<p>2.有的同学在配置 接口配置信息 的服务器时会一直失败 如果你配置的这个域名没有在 80 端口做任务处理的话是肯定会配置失败的</p>
+<p>配置这个服务器时你需要在 80 端口开放一个接口，然后你配置这个服务器资源时 微信后台会向你配置的域名服务器的 80 端口发送一个请求 这个请求会携带一个你自己填写的 Token 和 echostr 两个参数 你只需要这 80 端口判断是否是你紫的填写的 Token 或者你嫌麻烦可以直接把它 发送过来的 echostr 字符原样返回都可以 只要在 80 端口返回 echostr 内的字符就可以配置成功</p>
+<p>3.因为我是用 java 写的 开发后台 所以我的是 timestamp nonceStr 是这样生成的其他语言的 可以效仿</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">timestamp ---- Long.toString(System.currentTimeMillis() / 1000); nonceStr -----</span><br><span class="line">UUID.randomUUID().toString();</span><br></pre></td></tr></table></figure>
+
+<p>以上我是在学习微信公众平台开始时 遇到的问题 踩到的坑 。</p>
+<p>欢迎各位同行 提问 不保证一定能解答。</p>
 
     </div>
 
@@ -296,7 +282,7 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/CSS/" rel="tag"># CSS</a>
+              <a href="/tags/%E5%BE%AE%E4%BF%A1%E5%BC%80%E5%8F%91/" rel="tag"># 微信开发</a>
           </div>
 
         
@@ -304,11 +290,11 @@
 
         
     <div class="post-nav">
-      <div class="post-nav-item"></div>
       <div class="post-nav-item">
-    <a href="/2020/02/09/%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%B9%B3%E5%8F%B0%E5%BC%80%E5%8F%91%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9%E6%95%B4%E7%90%86/" rel="next" title="微信公众平台开发注意事项整理">
-      微信公众平台开发注意事项整理 <i class="fa fa-chevron-right"></i>
+    <a href="/2020/02/09/CSS%E5%B1%82%E5%8F%A0%E4%B8%8A%E4%B8%8B%E6%96%87/" rel="prev" title="CSS层叠上下文">
+      <i class="fa fa-chevron-left"></i> CSS层叠上下文
     </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -368,7 +354,6 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#CSS-层叠上下文"><span class="nav-number">1.</span> <span class="nav-text">CSS 层叠上下文</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#问题："><span class="nav-number">1.0.1.</span> <span class="nav-text">问题：</span></a></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
